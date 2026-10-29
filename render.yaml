@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: acci-alert-backend
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    disk:
+      name: acci-sqlite-data
+      mountPath: /app/data
+      sizeGB: 1
+    envVars:
+      - key: DATABASE_PATH
+        value: /app/data/acci-alert.db
+      - key: PORT
+        value: 3000
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID_1
+        value: 8202503146
+      - key: TELEGRAM_CHAT_ID_2
+        value: 7275581412
+      - key: TELEGRAM_CHAT_ID_3
+        value: 8312506925
+      - key: DEVICE_API_KEY
+        generateValue: true
+      - key: HEARTBEAT_TIMEOUT_SECONDS
+        value: 45

@@ -1,0 +1,6 @@
+{
+  "name": "ACCI ALERT - Smart Vehicle Collision Detection & Emergency Response System",
+  "description": "Real-time IoT emergency collision monitoring dashboard integrating ESP32, MPU6050 accelerometer, NEO-6M GPS telemetry, and instant multi-contact Telegram dispatch for school science exhibitions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
